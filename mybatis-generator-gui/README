@@ -1,0 +1,33 @@
+下载及构建:
+https://github.com/zouzg/mybatis-generator-gui
+使用:
+https://github.com/zouzg/mybatis-generator-gui/wiki/Usage-Guide
+
+
+注意:
+执行mvn jfx:jar命令之前
+需要根据将目录mybatis-generator-gui-0.8.4\src\main\resources\lib中的数据库驱动
+替换成自己的数据库驱动,将老版本的驱动删掉.
+将mybatis-generator-gui-0.8.4\src\main\java\com\zzg\mybatis\generator\model\DbType.java中
+枚举类型MySQL,Oracle,PostgreSQL,SQL_Server中的数据库驱动名修改为刚才替换后的驱动名.
+希望作者把lib驱动库用配置文件来获取名字或者软件运行时动态获取.
+
+
+要求
+
+本工具由于使用了Java 8的众多特性，所以要求JDK 1.8.0.60以上版本，对于JDK版本还没有升级的童鞋表示歉意。
+
+下载
+
+你可以从本链接下载本工具: https://github.com/astarring/mybatis-generator-gui/releases
+
+启动本软件
+
+方法一: 自助构建
+    git clone https://github.com/astarring/mybatis-generator-gui
+    cd mybatis-generator-gui
+    mvn jfx:jar
+    cd target/jfx/app/
+    java -jar mybatis-generator-gui.jar
+方法二: IDE中运行
+Eclipse or IntelliJ IDEA中启动, 找到com.zzg.mybatis.generator.MainUI类并运行就可以了
